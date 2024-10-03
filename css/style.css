@@ -1,0 +1,365 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+h1 {
+    padding-top: 20px; /* Ajoute 20 pixels d'espace au-dessus du h1 */
+}
+
+p {
+    margin-top: 10px; /* Réduit l'espace au-dessus du paragraphe */
+}
+
+
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires .populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires .populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Hébergements Marseille ***********/
+
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.marseille .populaires-cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.marseille .populaires-cards a {
+    width: 32%;
+}
+
+.marseille .card {
+    display: flex;
+    direction: column;
+    width: 90%;
+    height: 77%;
+    
+}
+
+.marseille .populaires-cards img {
+    width: 127%;
+    height: 88px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.marseille .card-rating,.marseille .card-txt {
+    padding-left: 9px;
+}
+
+.marseille .populaires-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    }
+
+/****** Header ***********/
+
+header {
+    width: 100%;
+    max-width: 1440px; /* Largeur maxi */
+    min-width: 1025px; /* Largeur mini */
+    margin: 0 auto; /* Centre le header avec des marges blanches sur les côtés */
+    padding: 10px 0px; /* espacement interne */
+    display: flex; /* Active Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Écarte les éléments à chaque extrémité */
+    align-items: center; /* Centre les éléments verticalement */
+  }
+
+.logoBooki {
+    width: 61.09px; /* largeur */
+    height: 19px; /* hauteur */
+    gap: 0px;
+    opacity: 0px;
+  }
+
+nav ul {
+    list-style-type: none; /* Retire les puces de la liste */
+    margin: 50;
+    padding: 0;
+    display: flex; /* Aligne les éléments en ligne */
+    justify-content: flex-end; /* alignés à la fin */
+    gap: 68px; /* espace entre les éléments de la liste */
+  }
+
+
+  nav ul li a {
+    border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
+  }
+ 
+  nav ul li a:hover {
+    border-top: solid 2px #0065FC; /* Bordure bleue au survol */
+    padding-top: 10px; /* Augmente l'espace uniquement en haut */
+    color: #0065FC; /* texte bleu au survol */
+  }
+
+
+/* Section recherche*/ 
+
+/* Conteneur */
+.search-container {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+    border-radius: 15px; /* Arrondit coins */
+    overflow: hidden; /* Cache les débordements */
+    margin: 20px 0; /* Ajoute de l'espace autour du bouton (haut/bas) */
+}
+
+/* Icône locate */
+.icon-locate {
+    background-color: #F2F2F2;
+    padding: 15px; /* espace autour de l'icône */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre horizontalement */
+}
+
+/* Champ de saisie */
+.input-field {
+    border: none; /* Supprime la bordure */
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold; /* Texte en gras */
+    max-width: 147px; /* Largeur max */
+}
+
+/* Bouton recherche */
+.search-button {
+    background-color: #0065fc; 
+    color: white; /* Couleur texte */
+    border: none; /* Supprime la bordure */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer; /* Curseur "main" au survol */
+    border-radius: 0 15px 15px 0; /* Arrondit coins droits du bouton */
+
+}
+
+/* Style au survol du bouton - optionnel */
+.search-button:hover {
+    background-color: #0052cc; /* Change la couleur de fond lorsque l'on survole le bouton */
+}
+
+/* Section filtres */
+
+/* Conteneur de filtres */
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Boutons de filtre */
+.filter-button {
+    display: inline-flex; /* aligne horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 8px; /* Espace entre icône et texte du bouton */
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #D9D9D9; /* Bordure bouton */
+    background-color: #ffffff;
+    border-radius: 20px 20px 20px;
+    font-weight: bold;
+}
+
+/* Effet survol */
+.filter-button:hover {
+    background-color: #DEEBFF; /* Change couleur de fond */
+}
+
+/* Info */
+.info-container {
+    display: flex;
+    display: inline-flex; /* aligne horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 8px; /* Espace entre icône et texte du bouton */
+    margin-bottom: 15px;
+}
+
+ /* Cercle */
+ .info-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D9D9D9; /* Bordure */
+    border-radius: 50%; /* Cercle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5px;
+    margin-bottom: 5px;
+}
+
+/* i dans le cercle */
+.info-circle i {
+    font-size: 10px;
+    color: #0065FC;
+    font-weight: bold;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+}
+
