@@ -167,6 +167,42 @@ a {
     box-sizing: border-box;
 }
 
+/****** Activités Marseille ***********/
+
+.activites {
+margin-top: 35px;
+padding: 30px;
+}
+
+.activites .populaires-cards {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.activites .populaires-cards a {
+    width: 24%;
+}
+
+.activites .card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    padding: 0px;
+    }
+
+.activites .populaires-cards img {
+    height: 90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activites .populaires-cards .card-content {
+    width: 100%;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
 
 /****** Header ***********/
 
@@ -188,7 +224,7 @@ header {
     opacity: 0px;
   }
 
-nav ul {
+  .mon-header nav ul {
     list-style-type: none; /* Retire les puces de la liste */
     margin: 50;
     padding: 0;
@@ -198,11 +234,11 @@ nav ul {
   }
 
 
-  nav ul li a {
+  .mon-header nav ul li a {
     border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
   }
  
-  nav ul li a:hover {
+  .mon-header nav ul li a:hover {
     border-top: solid 2px #0065FC; /* Bordure bleue au survol */
     padding-top: 10px; /* Augmente l'espace uniquement en haut */
     color: #0065FC; /* texte bleu au survol */
@@ -315,6 +351,33 @@ nav ul {
     font-weight: bold;
 }
 
+/****** Footer ***********/
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Espace égal entre chaque colonne */
+    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+}
+
+.footer-column {
+    flex: 1; /* Chaque colonne prend une part égale de l'espace disponible */
+    padding: 0 15px;
+}
+
+.footer-column ul {
+    list-style: none; /* Retire les puces de la liste */
+    padding: 0; /* Retire le padding par défaut de la liste */
+}
+
+.footer-column ul li {
+    margin-bottom: 15px; /* Espace entre chaque ligne de la liste */
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol- optionnel */
+}
+ 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
