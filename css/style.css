@@ -132,40 +132,56 @@ a {
     margin-bottom: 5px;
 }
 
-/****** Hébergements Marseille ***********/
+/****** Hébergements Ville ***********/
 
-.marseille .populaires-cards {
+.city .city-cards {
     display: flex;
-    gap: 4px;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.marseille .populaires-cards a {
-    width: 33%;
+.city a {
+    width: 30.5%;
 }
 
-.marseille .card {
+.city article {
     display: flex;
     flex-direction: column;
-    width: 83%;
-    height: 80%;
-    }
+}
 
-.marseille .populaires-cards img {
+.city .city-cards img {
     width: 100%;
-    height: 104px;
+    height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.marseille .populaires-cards .card-content {
+.city .city-cards .card-content {
     width: 100%;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
 }
+
+.city-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.city-cards .card-subtitle {
+    margin: 0;
+}
+
+.city-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.city-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
 
 /****** Activités Marseille ***********/
 
@@ -174,34 +190,37 @@ margin-top: 35px;
 padding: 30px;
 }
 
-.activites .populaires-cards {
+.activites .activites-cards {
     display: flex;
-    gap: 4px;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.activites .populaires-cards a {
-    width: 24%;
+.activites .activites-cards a {
+    width: 23%;
 }
 
 .activites .card {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    height: 90%;
     padding: 0px;
+    margin-top: 33px;
     }
 
-.activites .populaires-cards img {
-    height: 90%;
+.activites .activites-cards img {
+    height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.activites .populaires-cards .card-content {
-    width: 100%;
+.activites .activites-cards .card-content {
     padding-left: 15px;
     box-sizing: border-box;
+}
+
+.activites-cards .card-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /****** Header ***********/
@@ -272,6 +291,10 @@ header {
     font-size: 18px;
     font-weight: bold; /* Texte en gras */
     max-width: 147px; /* Largeur max */
+}
+
+input::placeholder {
+    color: black;
 }
 
 /* Bouton recherche */
