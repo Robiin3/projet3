@@ -183,7 +183,7 @@ a {
 }
 
 
-/****** Activités Marseille ***********/
+/****** Activités Ville ***********/
 
 .activites {
 margin-top: 35px;
@@ -252,7 +252,6 @@ header {
     gap: 68px; /* espace entre les éléments de la liste */
   }
 
-
   .mon-header nav ul li a {
     border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
   }
@@ -280,7 +279,7 @@ header {
     background-color: #F2F2F2;
     padding: 15px; /* espace autour de l'icône */
     display: flex;
-    align-items: center;
+    align-items: center; /* Centre verticalement les éléments */
     justify-content: center; /* Centre horizontalement */
 }
 
@@ -290,7 +289,7 @@ header {
     padding: 10px;
     font-size: 18px;
     font-weight: bold; /* Texte en gras */
-    max-width: 147px; /* Largeur max */
+    max-width: 155px; /* Largeur max */
 }
 
 input::placeholder {
@@ -306,7 +305,13 @@ input::placeholder {
     font-size: 18px;
     cursor: pointer; /* Curseur "main" au survol */
     border-radius: 0 15px 15px 0; /* Arrondit coins droits du bouton */
+}
 
+/* Icône loupe */
+.fa-magnifying-glass {
+    color: white;
+    display: none;
+    font-size: 15px;    
 }
 
 /* Style au survol du bouton - optionnel */
@@ -325,6 +330,13 @@ input::placeholder {
     font-weight: bold;
     margin-right: 10px;
 }
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 
 /* Boutons de filtre */
 .filter-button {
@@ -436,10 +448,111 @@ input::placeholder {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .filter-container {   /* Conteneur de filtres */
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .filter-container > :nth-child(1) {
+    flex-basis: 100%; /* Le premier élément occupe 100% de la largeur */
+    }
+
+    .activites .activites-cards img {
+    height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+
+
+    .mon-header {   /* Conteneur de header */
+        flex-direction: column;
+        justify-content: space-between; /* Éléments aux extrémités */        
+    }
+
+    header {
+        min-width: 320px; /* Largeur mini */
+      }
+
+      .mon-header nav ul {
+        justify-content: space-between; /* Éléments aux extrémités */        
+        gap: 140px; /* espace entre les éléments de la liste */
+      }
+
+    .mon-header nav ul li a:hover {
+        border-bottom: solid 2px #0065FC; /* Bordure bleue au survol */
+        padding-bottom: 10px; /* Augmente l'espace uniquement en haut */
+        color: #0065FC; /* texte bleu au survol */
+        border-top: none
+    }
+    
+    .fa-magnifying-glass {     /* Icône loupe */
+    display: block;
+    }
+
+    .hide-text {
+    position: absolute;       /* Permet de placer l'élément masqué */
+    text-indent: -9999px;     /* Déplace le texte hors de la vue */
+    }
+
+    .search-button {
+    border-radius: 15px; /* Arrondit 4 coins du bouton au lieu de 2 */
+    padding: 12px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Ombre en-dessous bouton loupe */
+    }
+
+    .buttons-container {
+        flex-wrap: wrap;
+    }
+
+    .populaires {
+        order: -1;
+    }
+
+    .populaires-cards,
+    .city-cards,
+    .activites-cards,
+    .footer-container {
+    flex-direction: column;
+    }
+
+    .populaires-cards a,
+    .city-cards a,
+    .activites .activites-cards a {
+        width: 100%;
+    }
+
+    .main-container {
+        max-width: 767px;
+        min-width: 320px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    
+.input-field {  /* Champ de saisie */
+    max-width: 100%; /* Largeur max */
+}
+
+.filter-button {
+    flex: 1; /* Chaque bouton prendra une largeur égale */
+}
+
+.hebergements-and-populaires .city {
+    background-color: white;
+}
+
+.hebergements-and-populaires .populaires {
+    border-radius: 0px;
+    margin-top: 0;
+}
+
+.activites {
+    margin-bottom: 25px;
+}
+
 }
 
