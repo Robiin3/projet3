@@ -245,20 +245,20 @@ header {
 
   .mon-header nav ul {
     list-style-type: none; /* Retire les puces de la liste */
-    margin: 50;
     padding: 0;
     display: flex; /* Aligne les éléments en ligne */
     justify-content: flex-end; /* alignés à la fin */
     gap: 68px; /* espace entre les éléments de la liste */
+    border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
+    margin-top: 10px; /* Augmente l'espace uniquement en haut */
+
   }
 
-  .mon-header nav ul li a {
-    border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
+  .mon-header nav ul li {
   }
  
-  .mon-header nav ul li a:hover {
+  .mon-header nav ul li:hover {
     border-top: solid 2px #0065FC; /* Bordure bleue au survol */
-    padding-top: 10px; /* Augmente l'espace uniquement en haut */
     color: #0065FC; /* texte bleu au survol */
   }
 
@@ -478,11 +478,20 @@ input::placeholder {
       }
 
       .mon-header nav ul {
-        justify-content: space-between; /* Éléments aux extrémités */        
-        gap: 140px; /* espace entre les éléments de la liste */
+        justify-content: space-between; /* Éléments aux extrémités */ 
+        width: 100%;       
       }
 
-    .mon-header nav ul li a:hover {
+      .mon-header nav {
+        width: 100%;       
+      }
+
+      .mon-header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mon-header nav ul li:hover {
         border-bottom: solid 2px #0065FC; /* Bordure bleue au survol */
         padding-bottom: 10px; /* Augmente l'espace uniquement en haut */
         color: #0065FC; /* texte bleu au survol */
@@ -555,4 +564,6 @@ input::placeholder {
 }
 
 }
+
+
 
