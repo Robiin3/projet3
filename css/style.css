@@ -234,14 +234,13 @@ header {
     display: flex; /* Active Flexbox pour aligner les éléments */
     justify-content: space-between; /* Écarte les éléments à chaque extrémité */
     align-items: center; /* Centre les éléments verticalement */
-  }
+}
 
 .logoBooki {
     width: 61.09px; /* largeur */
     height: 19px; /* hauteur */
     gap: 0px;
-    opacity: 0px;
-  }
+}
 
   .mon-header nav ul {
     list-style-type: none; /* Retire les puces de la liste */
@@ -249,18 +248,17 @@ header {
     display: flex; /* Aligne les éléments en ligne */
     justify-content: flex-end; /* alignés à la fin */
     gap: 68px; /* espace entre les éléments de la liste */
-    border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
-    margin-top: 10px; /* Augmente l'espace uniquement en haut */
-
-  }
+}
 
   .mon-header nav ul li {
-  }
+    padding-top: 15px; /* Augmente l'espace uniquement en haut */
+    border-top: 2px solid transparent;  /* Bordure invisible par défaut pour éviter un "saut" lorsque la bordure devient visible au survol */
+}
  
   .mon-header nav ul li:hover {
     border-top: solid 2px #0065FC; /* Bordure bleue au survol */
     color: #0065FC; /* texte bleu au survol */
-  }
+}
 
 
 /* Section recherche*/ 
@@ -286,7 +284,7 @@ header {
 /* Champ de saisie */
 .input-field {
     border: none; /* Supprime la bordure */
-    padding: 10px;
+    padding: 15px;
     font-size: 18px;
     font-weight: bold; /* Texte en gras */
     max-width: 155px; /* Largeur max */
@@ -467,7 +465,6 @@ input::placeholder {
 @media (max-width: 767.98px) {
     /* ... */
 
-
     .mon-header {   /* Conteneur de header */
         flex-direction: column;
         justify-content: space-between; /* Éléments aux extrémités */        
@@ -475,42 +472,45 @@ input::placeholder {
 
     header {
         min-width: 320px; /* Largeur mini */
-      }
+    }
 
-      .mon-header nav ul {
+    .mon-header nav ul {
         justify-content: space-between; /* Éléments aux extrémités */ 
-        width: 100%;       
-      }
+        width: 100%;
+        gap:0px;       
+    }
 
-      .mon-header nav {
+    .mon-header nav {
         width: 100%;       
-      }
+    }
 
-      .mon-header nav ul li {
+    .mon-header nav ul li {
         width: 100%;
         text-align: center;
+        border-bottom: solid 2px #F2F2F2; /* Bordure grise permanente */
+        padding-bottom: 10px;
     }
 
     .mon-header nav ul li:hover {
-        border-bottom: solid 2px #0065FC; /* Bordure bleue au survol */
-        padding-bottom: 10px; /* Augmente l'espace uniquement en haut */
+        border-bottom: solid 2px #0065FC; /* Bordure bleue au toucher */
+        padding-bottom: 10px;
         color: #0065FC; /* texte bleu au survol */
         border-top: none
     }
     
     .fa-magnifying-glass {     /* Icône loupe */
-    display: block;
+        display: block;
     }
 
     .hide-text {
-    position: absolute;       /* Permet de placer l'élément masqué */
-    text-indent: -9999px;     /* Déplace le texte hors de la vue */
+        position: absolute;       /* Permet de placer l'élément masqué */
+        text-indent: -9999px;     /* Déplace le texte hors de la vue */
     }
 
     .search-button {
-    border-radius: 15px; /* Arrondit 4 coins du bouton au lieu de 2 */
-    padding: 12px;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Ombre en-dessous bouton loupe */
+        border-radius: 15px; /* Arrondit 4 coins du bouton au lieu de 2 */
+        padding: 12px;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3); /* Ombre en-dessous bouton loupe */
     }
 
     .buttons-container {
@@ -525,7 +525,7 @@ input::placeholder {
     .city-cards,
     .activites-cards,
     .footer-container {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .populaires-cards a,
@@ -535,33 +535,53 @@ input::placeholder {
     }
 
     .main-container {
-        max-width: 767px;
+        max-width: 767.98px;
         min-width: 320px;
         padding: 0px;
         box-sizing: border-box;
     }
-
     
-.input-field {  /* Champ de saisie */
-    max-width: 100%; /* Largeur max */
-}
+    .input-field {  /* Champ de saisie */
+        max-width: 100%; /* Largeur max */
+    }
 
-.filter-button {
-    flex: 1; /* Chaque bouton prendra une largeur égale */
-}
+    .filter-button {
+        flex: 1; /* Chaque bouton prendra une largeur égale */
+    }
 
-.hebergements-and-populaires .city {
-    background-color: white;
-}
+    .hebergements-and-populaires .city {
+        background-color: white;
+    }
 
-.hebergements-and-populaires .populaires {
-    border-radius: 0px;
-    margin-top: 0;
-}
+    .hebergements-and-populaires .populaires {
+        border-radius: 0px;
+        margin-top: 0;
+    }
 
-.activites {
-    margin-bottom: 25px;
-}
+    .activites {
+        margin-bottom: 25px;
+        margin-top: 0px;
+    }
+    
+    body{
+        margin: 20px 0px;
+    }
+
+    .main-titles,
+    .search,
+    .filter-container,
+    .info-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    h1 {
+        padding-top: 0px;
+    }
 
 }
 
