@@ -229,7 +229,6 @@ header {
     width: 100%;
     max-width: 1440px; /* Largeur maxi */
     margin: 0 auto; /* Centre le header avec des marges blanches sur les côtés */
-    padding: 10px 0px; /* espacement interne */
     display: flex; /* Active Flexbox pour aligner les éléments */
     justify-content: space-between; /* Écarte les éléments à chaque extrémité */
     align-items: center; /* Centre les éléments verticalement */
