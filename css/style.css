@@ -228,7 +228,6 @@ padding: 30px;
 header {
     width: 100%;
     max-width: 1440px; /* Largeur maxi */
-    min-width: 1025px; /* Largeur mini */
     margin: 0 auto; /* Centre le header avec des marges blanches sur les côtés */
     padding: 10px 0px; /* espacement interne */
     display: flex; /* Active Flexbox pour aligner les éléments */
@@ -571,8 +570,8 @@ input::placeholder {
     .search,
     .filter-container,
     .info-container {
-        margin-left: 20px;
-        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     footer {
@@ -581,6 +580,14 @@ input::placeholder {
 
     h1 {
         padding-top: 0px;
+    }
+
+    .input-field {
+        padding-right: 0px;
+    }
+
+    .search-container input {
+        flex-grow: 1; /* Barre recherche remplit l'espace disponible */
     }
 
 }
